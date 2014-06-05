@@ -1,0 +1,39 @@
+.megabar {
+    width: 100%;
+}
+
+.megamenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.megamenu > li {
+    float: left;
+}
+.megamenu > li > a {
+}
+
+.megamenu > li .full-megabox,
+.megamenu > li .megabox  {
+    float: left;
+    position: absolute;
+    visibility: hidden;
+}
+
+.megamenu > li > a:hover {
+}
+
+.megamenu > li:hover .megabox,
+.megamenu > li:hover .full-megabox {
+    visibility: visible;
+}
+
+.megamenu > li:hover .full-megabox {
+    left: 0;
+}
+
+.megamenu > li:hover .megabox {
+    left: auto;
+}

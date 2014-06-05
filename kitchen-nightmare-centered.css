@@ -1,0 +1,42 @@
+.megabar {
+    width: auto;
+}
+
+.megamenu {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.megamenu > li {
+    float: left;
+}
+
+.megamenu > li > a {
+}
+
+.megamenu > li .full-megabox,
+.megamenu > li .megabox  {
+    position: absolute;
+    /* below assumes using text-align: center in a containing element */
+    text-align: left;
+    visibility: hidden;
+}
+
+.megamenu > li > a:hover {
+}
+
+.megamenu > li:hover .megabox,
+.megamenu > li:hover .full-megabox {
+    visibility: visible;
+}
+
+.megamenu > li:hover .full-megabox {
+    left: 0;
+}
+
+.megamenu > li:hover .megabox {
+    left: auto;
+}

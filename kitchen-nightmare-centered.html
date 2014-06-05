@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>kitchen-nightmare examples</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="naked-grid.css" rel="stylesheet" type="text/css" />
+    <link href="kitchen-nightmare-centered.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            overflow: scroll;
+        }
+        input, textarea {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        ul {
+            list-style-type: none;
+            padding-bottom: 1em;
+            padding-top: 1em;
+        }
+
+        .center {
+            text-align: center !important;
+        }
+        /* adds a little space between vertical columns */
+        .column {
+            padding-left: 0.25em;
+            padding-right: 0.25em;
+        }
+        /* open up a little 'breathing room' around the entire grid */
+        .grid {
+            padding: 1em;
+        }
+
+        .megamenu {
+            height: auto;
+        }
+        .megamenu > li {
+            background-color: #333;
+            margin-bottom: 2em;
+            width: 10em;
+        }
+        .megamenu > li > a {
+            color: #fff;
+            display: block;
+            font-size: 0.8em;
+            height: 3.25em;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 1em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .megamenu > li .full-megabox,
+        .megamenu > li .megabox {
+            background-color: #eee;
+            border: solid 1px silver;
+            border-radius: 0 0 6px 6px;
+        }
+        .megamenu > li:hover .megabox,
+        .megamenu > li:hover .full-megabox {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        .megamenu > li > a:hover {
+            background-color: #555;
+            border-left: solid 1px silver;
+            border-right: solid 1px silver;
+            color: #ffdd33;
+        }
+
+        .vlist {
+            margin-bottom: 1em;
+        }
+        .vlist h6 {
+            display: inline;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .vlist img {
+            display:inline;
+            float:left;
+            padding-right: 1em;
+        }
+        .vlist li {
+            clear: both;
+            padding-bottom: 0.5em;
+            padding-top: 0.5em;
+        }
+        .vlist p {
+            display: inline;
+        }
+
+        .calendar {
+            margin-top: 2em;
+            width: 100%;
+        }
+        .calendar td {
+            height: 6em;
+            padding-left: 0.4em;
+            padding-right: 0.4em;
+            text-align: left;
+            vertical-align: top;
+            width: 14.285%;
+        }
+        .calendar td > p {
+            line-height: 1;
+            margin-top: 0;
+        }
+        .calendar tr {
+            font-size: 0.75em;
+        }
+        .day {
+            font-size: 1.3em;
+            padding-right: 0.5em;
+        }
+        .day-of-week {
+            color: #999;
+            font-size: 1.3em;
+            padding-right: 0.5em;
+        }
+        .prev-month,
+        .next-month {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body style="overflow-y: scroll;">
+<div class="grid">
+    <div class="col-1-1 center">
+            <ul class="megamenu">
+                <li>
+                    <a href="#">Home</a>
+                    <div class="megabox">
+                        <p>Duo Reges: constructio interrete. Ea possunt paria non esse. Quid sequatur, quid repugnet, vident. Cur iustitia laudatur? Traditur, inquit, ab Epicuro ratio neglegendi doloris. Quid ad utilitatem tantae pecuniae? Haec igitur Epicuri non probo, inquam.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">Columns</a>
+                    <div class="full-megabox">
+                        <div class="col-1-1">
+                            <h2>Ita ne hoc quidem modo paria peccata sunt.</h2>
+                            <hr>
+                        </div>
+
+                        <div class="col-1-3 column">
+                            <h3>Scrupulum inquam abeunti</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cave putes quicquam esse verius. Num quid tale Democritus? Sed ea mala virtuti magnitudine obruebantur. Duo Reges: constructio interrete. Stoicos roga. Facete M. </p>
+                            <p>Moriatur, inquit. Erat enim Polemonis. Zenonis est, inquam, hoc Stoici. Prioris generis est docilitas, memoria; Is es profecto tu. Rationis enim perfectio est virtus; </p>
+                            <p>At enim hic etiam dolore. Quae duo sunt, unum facit. At certe gravius. Cur haec eadem Democritus? </p>
+                        </div>
+
+                        <div class="col-1-3 column">
+                            <h3>Quaerimus enim finem bonorum</h3>
+                            <p>Suo genere perveniant ad extremum; Et nemo nimium beatus est; Aliter enim nosmet ipsos nosse non possumus. Restinguet citius, si ardentem acceperit. Apparet statim, quae sint officia, quae actiones. </p>
+                            <p>Quid de Pythagora? Et quod est munus, quod opus sapientiae? Efficiens dici potest. Immo alio genere; </p>
+                            <p>Immo alio genere; Tu quidem reddes; Cur deinde Metrodori liberos commendas? Dicimus aliquem hilare vivere; A mene tu? Certe, nisi voluptatem tanti aestimaretis. </p>
+                        </div>
+                        <div class="col-1-3 column">
+                            <h3>Suam denique cuique naturam esse ad vivendum ducem</h3>
+                            <p>Itaque ad tempus ad Pisonem omnes. Nihil illinc huc pervenit. Non potes, nisi retexueris illa. Stoicos roga. Quid de Pythagora? Hoc tu nunc in illo probas. Si id dicis, vicimus. </p>
+                            <p>Si longus, levis. Quorum altera prosunt, nocent altera. Duo Reges: constructio interrete. Hunc vos beatum; An eiusdem modi? Quid iudicant sensus? </p>
+                            <p>Quis Aristidem non mortuum diligit? Scrupulum, inquam, abeunti; Tu vero, inquam, ducas licet, si sequetur; Iam enim adesse poterit. </p>
+                        </div>
+                        <div class="col-1-1">
+                            <hr>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">Links</a>
+                    <div class="full-megabox">
+                        <div class="col-1-1">
+                            <div class="col-2-3 column">
+                                <ul class="vlist">
+                                    <li>
+                                        <a href="#"><img src="http://lorempixel.com/75/75/food/1"></a>
+                                        <h6>Quid Zeno</h6><br />
+                                        <p>Falli igitur possumus. An haec ab eo non dicuntur? Nemo igitur esse beatus potest. Zenonis est, inquam, hoc Stoici. Quid ad utilitatem tantae pecuniae?</p>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"><img src="http://lorempixel.com/75/75/food/2"></a>
+                                        <h6>Dolere malum est</h6><br />
+                                        <p>Eam stabilem appellas. Quis istum dolorem timet? Negare non possum. Ne discipulum abducam, times. Nihil ad rem! Ne sit sane; Nam ista vestra: Si gravis, brevis;</p>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"><img src="http://lorempixel.com/75/75/food/3"></a>
+                                        <h6>Fortitudinis quaedam praecepta</h6><br />
+                                        <p>Egone quaeris, inquit, quid sentiam? Primum quid tu dicis breve? Facillimum id quidem est, inquam. Summae mihi videtur inscitiae.</p>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"><img src="http://lorempixel.com/75/75/food/4"></a>
+                                        <h6>Quod autem</h6><br />
+                                        <p>Quid nunc honeste dicit? Memini vero, inquam; Quis istud, quaeso, nesciebat?</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-1-3 column">
+                                <ul class="vlist">
+                                    <li><a href="http://www.gastronomica.org/">Gastronomica</a></li>
+                                    <li><a href="http://cliturecheesemag.com/">Cliture</a></li>
+                                    <li><a href="http://www.spensermag.com/index.html">Spenser Magazine</a></li>
+                                    <li><a href="http://www.foodandwine.com/">Food & Wine</a></li>
+                                    <li><a href="http://www.saveur.com/">Saveur</a></li>
+                                    <li><a href="http://www.bonappetit.com/">Bon Apetit</a></li>
+                                    <li><a href="http://www.foodnetwork.com/">Food Network</a></li>
+                                    <li><a href="http://www.cookinglight.com/">Cooking Light</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">Calendar</a>
+                    <div class="full-megabox">
+                        <div class="center col-1-1">
+                            <h1>August 2000</h1>
+
+                            <table class="calendar">
+                                <tr>
+                                    <td class="prev-month"><span class="day">29</span><span class="day-of-week">Sun</span></td>
+                                    <td class="prev-month"><span class="day">30</span><span class="day-of-week">Mon</span></td>
+                                    <td><span class="day">1</span><span class="day-of-week">Tue</span></td>
+                                    <td><span class="day">2</span><span class="day-of-week">Wed</span></td>
+                                    <td>
+                                        <p>
+                                            <span class="day">3</span>
+                                            <span class="day-of-week">Thu</span>
+                                            Ea possunt paria non esse
+                                        </p>
+                                    </td>
+                                    <td><span class="day">4</span><span class="day-of-week">Fri</span></td>
+                                    <td><span class="day">5</span><span class="day-of-week">Sat</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="day">6</span></td>
+                                    <td><span class="day">7</span></td>
+                                    <td><span class="day">8</span></td>
+                                    <td>
+                                        <p>
+                                            <span class="day">9</span>
+                                            Teneo, inquit, finem illi videri nihil dolere
+                                        </p>
+                                    </td>
+                                    <td><span class="day">10</span></td>
+                                    <td><span class="day">11</span></td>
+                                    <td>
+                                        <p>
+                                            <span class="day">12</span>
+                                            Huius, Lyco, oratione locuples, rebus ipsis ielunior.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="day">13</span></td>
+                                    <td><span class="day">14</span></td>
+                                    <td>
+                                        <p>
+                                            <span class="day">15</span>
+                                            Quare attende, quaeso. Non potes, nisi retexueris illa.
+                                        </p>
+                                        <p>Quid me istud rogas</p>
+                                    </td>
+                                    <td><span class="day">16</span></td>
+                                    <td><span class="day">17</span>
+                                        <p>Stoicos roga. Ea possunt paria non esse.</p>
+                                    </td>
+                                    <td><span class="day">18</span></td>
+                                    <td><span class="day">19</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="day">20</span></td>
+                                    <td><span class="day">21</span>
+                                    </td>
+                                    <td><span class="day">22</span></td>
+                                    <td><span class="day">23</span>
+                                        <p>Haec dicuntur inconstantissime</p>
+                                    </td>
+                                    <td><span class="day">24</span></td>
+                                    <td><span class="day">25</span>
+                                        <p>Equidem e Cn</p>
+                                        <p>Duo Reges: constructio interrete</p>
+                                    </td>
+                                    <td><span class="day">26</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="day">27</span></td>
+                                    <td><span class="day">28</span></td>
+                                    <td><span class="day">29</span></td>
+                                    <td><span class="day">30</span></td>
+                                    <td><span class="day">31</span></td>
+                                    <td class="next-month"><span class="day">1</span></td>
+                                    <td class="next-month"><span class="day">2</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">Form</a>
+                        <div class="full-megabox col-1-1 center">
+                            <h2>Send an email</h2>
+                            <div style="display: inline-block; padding-right: 1em; vertical-align: top;">
+                                <input type="text" name="name" placeholder="Your name*"/>
+                                <input type="email" name="email" placeholder="Email*"/>
+                                <input type="text" name="phone" placeholder="Phone"/>
+                                <input type="text" name="company" placeholder="Company"/>
+                                <input type="text" name="website" placeholder="Website"/>
+                            </div>
+                            <div style="display: inline-block;">
+                                <textarea style="resize: none;" rows="10" cols="50" placeholder="Your message*"></textarea>
+                            </div>
+                            <div class="col-1-1" style="display: block; padding: 1em;">
+                                <input type="button" value="Send" style="margin: 0 auto;">
+                            </div>
+                        </div>
+                </li>
+            </ul>
+        </div>
+
+        <h1>Explanetur igitur.</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem etiam dolorem saepe perpetiuntur, ne, si id non faciant, incidant in maiorem. Quorum sine causa fieri nihil putandum est. Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. Rhetorice igitur, inquam, nos mavis quam dialectice disputare? Duo Reges: constructio interrete. Qua tu etiam inprudens utebare non numquam. Vide, ne etiam menses! nisi forte eum dicis, qui, simul atque arripuit, interficit. Quid ergo aliud intellegetur nisi uti ne quae pars naturae neglegatur?</p>
+        <p>Immo videri fortasse. Hic ambiguo ludimur. Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis vitia posuisse contraria. Ergo ita: non posse honeste vivi, nisi honeste vivatur? An hoc usque quaque, aliter in vita?</p>
+        <p>Quae cum dixisset paulumque institisset, Quid est? Quodsi ipsam honestatem undique pertectam atque absolutam. Sed in rebus apertissimis nimium longi sumus. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Si quae forte-possumus. Itaque hic ipse iam pridem est reiectus; Quid enim ab antiquis ex eo genere, quod ad disserendum valet, praetermissum est? Non est ista, inquam, Piso, magna dissensio.</p>
+        <p>Sed fortuna fortis; Rapior illuc, revocat autem Antiochus, nec est praeterea, quem audiamus. Quamquam haec quidem praeposita recte et reiecta dicere licebit. Atqui pugnantibus et contrariis studiis consiliisque semper utens nihil quieti videre, nihil tranquilli potest. Sed fac ista esse non inportuna; Istam voluptatem perpetuam quis potest praestare sapienti? Hoc loco tenere se Triarius non potuit. Oratio me istius philosophi non offendit;</p>
+        <p>Uterque enim summo bono fruitur, id est voluptate. Consequatur summas voluptates non modo parvo, sed per me nihilo, si potest; Si mala non sunt, iacet omnis ratio Peripateticorum. Animi enim quoque dolores percipiet omnibus partibus maiores quam corporis. Quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? Quid, de quo nulla dissensio est? Egone non intellego, quid sit don Graece, Latine voluptas? At ille pellit, qui permulcet sensum voluptate.</p>
+
+        <h3>Nunc omni virtuti vitium contrario nomine opponitur.</h3>
+
+        <p>Quid sequatur, quid repugnet, vident. Non dolere, inquam, istud quam vim habeat postea videro; Ego vero volo in virtute vim esse quam maximam; Sed quid attinet de rebus tam apertis plura requirere? Ita fit beatae vitae domina fortuna, quam Epicurus ait exiguam intervenire sapienti. Audax negotium, dicerem impudens, nisi hoc institutum postea translatum ad philosophos nostros esset. Sic, et quidem diligentius saepiusque ista loquemur inter nos agemusque communiter. Quae duo sunt, unum facit. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur.</p>
+        <p>Varietates autem iniurasque fortunae facile veteres philosophorum praeceptis instituta vita superabat. Quaesita enim virtus est, non quae relinqueret naturam, sed quae tueretur. Iam id ipsum absurdum, maximum malum neglegi. Quis istud possit, inquit, negare? Sin autem est in ea, quod quidam volunt, nihil impedit hanc nostram comprehensionem summi boni. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Tubulo putas dicere? Nec tamen ullo modo summum pecudis bonum et hominis idem mihi videri potest. Parvi enim primo ortu sic iacent, tamquam omnino sine animo sint.</p>
+
+        <h2>Ut in voluptate sit, qui epuletur, in dolore, qui torqueatur.</h2>
+
+        <p>Quid enim de amicitia statueris utilitatis causa expetenda vides. Nihil opus est exemplis hoc facere longius.</p>
+        <p>Tertium autem omnibus aut maximis rebus iis, quae secundum naturam sint, fruentem vivere. Sed tamen intellego quid velit. Qualem igitur hominem natura inchoavit? Duae sunt enim res quoque, ne tu verba solum putes. Quae cum dixisset paulumque institisset, Quid est? Non est igitur voluptas bonum. Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus;</p>
+        <p>Non est enim vitium in oratione solum, sed etiam in moribus. Quis non odit sordidos, vanos, leves, futtiles? Qua igitur re ab deo vincitur, si aeternitate non vincitur? Universa enim illorum ratione cum tota vestra confligendum puto. Nam quibus rebus efficiuntur voluptates, eae non sunt in potestate sapientis. Hoc ille tuus non vult omnibusque ex rebus voluptatem quasi mercedem exigit. Cur igitur easdem res, inquam, Peripateticis dicentibus verbum nullum est, quod non intellegatur?</p>
+</div>
+</body>
+</html>
