@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>kitchen-nightmare examples</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="naked-grid.css" rel="stylesheet" type="text/css" />
+    <link href="kitchen-nightmare.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            overflow: scroll;
+        }
+        div .col-1-1 .megabar {
+            margin-bottom: 2em;
+        }
+        div .col-1-1 .megabar {
+            padding-bottom: 1em;
+        }
+        p + h2 {
+            padding-top: 1em;
+        }
+        .center {
+            text-align: center !important;
+        }
+        .grid {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        .megamenu * {
+            outline: dotted red 1px;
+        }
+        .megamenu > li > a {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    </style>
+</head>
+<body>
+<div class="grid">
+    <div class="col-1-1">
+        <h1>kitchen-nightmare overview</h1>
+
+        <h2>tl;dr version</h2>
+        <p>
+            I know, I know...you're in a hurry and just want to grab something that might be close to what you want.
+            The <a href="kitchen-nightmare-full.html">full width sample</a> uses the raw ultra-simple css file and
+            places the customizations in the style section of the header. Combine the styles found in the header
+            with the same ones in the css file and you're good to go. The <a href="kitchen-nightmare-centered.html">
+            centered sample</a> of the menu has the same structure.
+        </p>
+        <p>
+            Combining the styles should be easy since all classes of interest begin with ".megamenu". Anything
+            beyond that involves the grid (see the <a href="https://github.com/dog-lab/naked-grid">
+            naked-grid project</a>) or stuff entered as a demonstration, or example, of things you can do with the menu.
+        </p>
+        <p>And one more thing: No, it isn't responsive &ndash; yet!</p>
+
+        <h2>Introduction</h2>
+        <p>kitchen-nightmare is released with two different layouts:</p>
+
+        <ol>
+            <li>A menu stretching across 100% of its parent or container, and</li>
+            <li>A menu centered in its parent or container</li>
+        </ol>
+
+        <p>
+            The centered menu takes up the horizontal space used by the sum of the widths of the individual list item
+            elements (&lt;li&gt;). Of course, you can also "pad out" the container to increase that width.
+            The container, in this case, is the unordered list element (&lt;ul&gt;) that contains all of the
+            top level &lt;li&gt; elements.
+        </p>
+        <p>
+            This page discusses the generic structure of the menu and provides links to some simple examples of each
+            layout. In any event, to keep things simple, the first layout (Full Mega Menu) is considered the
+            default layout
+        </p>
+        <p>The menu has a simple structure:</p>
+        <ul>
+            <li>A container &ndash; in the sample here, this is a simple div that can provide a background
+            color, or in the case of the centered menu, a structure that centers the menu on the page.</li>
+            <li>An unordered list container that contains the list of menu selections</li>
+            <li>
+                A list item for each menu selection that provides UI services via a link element
+                (e.g. the ability to respond to a hover state), and finally
+            </li>
+            <li>
+                A menu item container that houses the UI components associated with a menu item. This could
+                be something like a list of links, a form, or any other specialized content applicable to
+                the menu item.
+            </li>
+        </ul>
+        <p>
+            The base kitchen-nightmare CSS used for this page is about as stripped down as I can make it. One custom
+            setting, however, is padding added around the anchor elements embedded in the &lt;li&gt; elements at
+            the top of the menu container. This allows for easier reading of the menu items displayed below. Since
+            you will probably want to use your own sizing I moved that setting to the style section in the header
+            of this page ( .megamenu > li > a { padding-left: 1em; padding-right: 1em; } ).
+        </p>
+        <p>
+            Another blank css rule is found for ( megamenu > li > a:hover {} ). This allows you to highlight (or not)
+            the current menu item background, its border, or whatever else you like. Examples of this are found in
+            the provided example pages.
+        </p>
+
+        <h2>Full (100% Wide) Mega Menu</h2>
+        <div class="col-1-1 megabar">
+            <p>
+                This layout, as suggested by the name, stretches horizontally across the screen (or across its
+                container). The individual menu items are left aligned with the an option of right aligned
+                items if required. The skeleton, or outline, of the elements involved in this menu is displayed
+                below as a series of boxes outlined with red dots.
+            </p>
+            <p>
+                Mouse over each menu item and you can see a placeholder container that mirrors the menu item
+                name followed by a "->" and the type of container connected to that menu item. For example,
+                "Home" has a container with text that reads "Home -> Full Megabox." A Full Megabox extends from the
+                far left to the end of the text, or the far right of the menu; whichever comes first.  The next entry
+                is "Columns" and has a container with text reading "Columns -> Megabox." A megabox extends from the
+                current column, "Columns" in this case, to the end of the text, or the far right of the menu; whichever
+                comes first.
+            </p>
+            <p>
+                The <a href="kitchen-nightmare-full.html">example</a> customizes the menu UI and adds some sample
+                menu item data. The example page header contains all custom css properties in the style element of
+                the header. This better demonstrates the changes relating to the UI vs the structure supporting
+                menu layout. I suppose, if you wanted to glance at this sideways, you could say it's a separation
+                of concerns: layout (structure) vs UI.
+            </p>
+
+            <div class="megabar">
+                <ul class="megamenu">
+                    <li>
+                        <a href="#">Home</a>
+                        <div class="full-megabox">
+                            Home -> Full Megabox
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Columns</a>
+                        <div class="megabox">
+                            Columns -> Megabox
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Links</a>
+                        <div class="megabox">
+                            Links -> Megabox
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Calendar</a>
+                        <div class="full-megabox">
+                            Calendar -> Full Megabox (stretched out to reach Calendar ListItem)
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Form</a>
+                        <div class="megabox">
+                            Form -> Megabox
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Right Aligned Menu Items</h3>
+            <p>
+                In some cases you might want a menu item pushed out to the right hand side of the screen
+                (or right hand side of the menu container); pretty easy stuff to accomplish. Just add a CSS class
+                to a (&lt;li&gt;) menu item for "float right" and place it at the end of your &lt;li&gt; menu item list.
+                Immediately below is the same menu as above with an added &lt;li&gt; element pushed out to the right.
+                For demonstration purposes, the CSS float property is added as an inline style to the &lt;li&gt;
+                element (e.g. &lt;li style="float: right"&gt;).
+            </p>
+            <div class="megabar">
+                <ul class="megamenu">
+                    <li>
+                        <a href="#">Home</a>
+                        <div class="full-megabox">
+                            Home -> Full Megabox
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Columns</a>
+                        <div class="megabox">
+                            Columns -> Megabox
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Links</a>
+                        <div class="megabox">
+                            Links -> Megabox
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Calendar</a>
+                        <div class="full-megabox">
+                            Calendar -> Full Megabox (stretched out to reach Calendar ListItem)
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Form</a>
+                        <div class="megabox">
+                            Form -> Megabox
+                        </div>
+                    </li>
+
+                    <li style="float: right;">
+                        <a href="#">Right</a>
+                        <div class="megabox">
+                            Right -> Megabox
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Centered Mega Menu</h2>
+    <p>
+        As the name says, this layout creates a mega menu centered in its container. In this case, the menu is
+        centered in a div that stretches horizontally across the screen. The div contains a text-align: center
+        css property to center its contents. Additionally the &lt;ul&gt; mega menu element requires changing the
+        display property to inline-block to effect the changes.
+    </p>
+    <div class="col-1-1 megabar center">
+        <ul class="megamenu" style="display: inline-block; text-align: left;">
+            <li>
+                <a href="#">Home</a>
+                <div class="full-megabox">
+                    Home -> Full Megabox
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Columns</a>
+                <div class="megabox">
+                    Columns -> Megabox
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Links</a>
+                <div class="megabox">
+                    Links -> Megabox
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Calendar</a>
+                <div class="full-megabox">
+                    Calendar -> Full Megabox (stretched out to reach Calendar ListItem)
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Form</a>
+                <div class="full-megabox">
+                    Form -> Megabox (stretched out to reach Form ListItem)
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
