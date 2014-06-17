@@ -25,6 +25,10 @@
     visibility: hidden;
 }
 
+.megamenu > li .full-begabox {
+    width: 100%;
+}
+
 .megamenu > li > a:hover {
 }
 
