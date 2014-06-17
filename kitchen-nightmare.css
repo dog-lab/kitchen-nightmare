@@ -22,6 +22,10 @@
     visibility: hidden;
 }
 
+.megamenu > li .full-megabox {
+    width: 100%;
+}
+
 .megamenu > li > a:hover {
 }
 
